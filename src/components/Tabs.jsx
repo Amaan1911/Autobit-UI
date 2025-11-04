@@ -1,7 +1,7 @@
 import React from "react";
 
 const Tabs = React.memo(() => (
-  <div className="flex gap-4 sm:gap-20 px-4 sm:px-6 pb-4 overflow-x-auto transition-all duration-300 ">
+  <div className="flex gap-18 px-4 sm:px-6 pb-4 overflow-x-auto transition-all duration-300 ">
     <button className="text-gray-500 text-sm sm:text-base whitespace-nowrap transition-colors duration-200 hover:text-gray-300">
       Favourites
     </button>

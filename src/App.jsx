@@ -1,17 +1,125 @@
-import React from 'react';
-import { Menu, Battery, Filter, Home, TrendingUp, Clock, User } from 'lucide-react';
+import React from "react";
+import {
+  Menu,
+  Battery,
+  Filter,
+  Home,
+  TrendingUp,
+  Clock,
+  User,
+} from "lucide-react";
+import ReactCountryFlag from "react-country-flag";
 
 const App = (props) => {
   const defaultItems = [
-    { time: '15:00:00', pair: 'EUR/GBP', change: '+30', percentage: '+23.2%', price1: '1478.256369', price2: '1478.256369', low: 'L:235698', high: 'H:25.3659', price1Color: 'red', price2Color: 'green' },
-    { time: '15:00:00', pair: 'EUR/GBP', change: '+30', percentage: '+23.2%', price1: '1478.256369', price2: '1478.256369', low: 'L:235698', high: 'H:25.3659', price1Color: 'white', price2Color: 'green' },
-    { time: '15:00:00', pair: 'EUR/GBP', change: '+30', percentage: '+23.2%', price1: '1478.256369', price2: '1478.256369', low: 'L:235698', high: 'H:25.3659', price1Color: 'white', price2Color: 'red' },
-    { time: '15:00:00', pair: 'EUR/GBP', change: '+30', percentage: '+23.2%', price1: '1478.256369', price2: '1478.256369', low: 'L:235698', high: 'H:25.3659', price1Color: 'red', price2Color: 'green' },
-    { time: '15:00:00', pair: 'EUR/GBP', change: '+30', percentage: '+23.2%', price1: '1478.256369', price2: '1478.256369', low: 'L:235698', high: 'H:25.3659', price1Color: 'red', price2Color: 'green' },
-    { time: '15:00:00', pair: 'EUR/GBP', change: '+30', percentage: '+23.2%', price1: '1478.256369', price2: '1478.256369', low: 'L:235698', high: 'H:25.3659', price1Color: 'white', price2Color: 'green' },
-    { time: '15:00:00', pair: 'EUR/GBP', change: '+30', percentage: '+23.2%', price1: '1478.256369', price2: '1478.256369', low: 'L:235698', high: 'H:25.3659', price1Color: 'green', price2Color: 'red' },
-    { time: '15:00:00', pair: 'EUR/GBP', change: '+30', percentage: '+23.2%', price1: '1478.256369', price2: '1478.256369', low: 'L:235698', high: 'H:25.3659', price1Color: 'green', price2Color: 'red' },
-    { time: '15:00:00', pair: 'EUR/GBP', change: '+30', percentage: '+23.2%', price1: '1478.256369', price2: '1478.256369', low: 'L:235698', high: 'H:25.3659', price1Color: 'red', price2Color: 'green' },
+    {
+      time: "15:00:00",
+      pair: "EUR/GBP",
+      change: "+30",
+      percentage: "+23.2%",
+      price1: "1478.256369",
+      price2: "1478.256369",
+      low: "L:235698",
+      high: "H:25.3659",
+      price1Color: "red",
+      price2Color: "green",
+    },
+    {
+      time: "15:00:00",
+      pair: "EUR/GBP",
+      change: "+30",
+      percentage: "+23.2%",
+      price1: "1478.256369",
+      price2: "1478.256369",
+      low: "L:235698",
+      high: "H:25.3659",
+      price1Color: "white",
+      price2Color: "green",
+    },
+    {
+      time: "15:00:00",
+      pair: "EUR/GBP",
+      change: "+30",
+      percentage: "+23.2%",
+      price1: "1478.256369",
+      price2: "1478.256369",
+      low: "L:235698",
+      high: "H:25.3659",
+      price1Color: "white",
+      price2Color: "red",
+    },
+    {
+      time: "15:00:00",
+      pair: "EUR/GBP",
+      change: "+30",
+      percentage: "+23.2%",
+      price1: "1478.256369",
+      price2: "1478.256369",
+      low: "L:235698",
+      high: "H:25.3659",
+      price1Color: "red",
+      price2Color: "green",
+    },
+    {
+      time: "15:00:00",
+      pair: "EUR/GBP",
+      change: "+30",
+      percentage: "+23.2%",
+      price1: "1478.256369",
+      price2: "1478.256369",
+      low: "L:235698",
+      high: "H:25.3659",
+      price1Color: "red",
+      price2Color: "green",
+    },
+    {
+      time: "15:00:00",
+      pair: "EUR/GBP",
+      change: "+30",
+      percentage: "+23.2%",
+      price1: "1478.256369",
+      price2: "1478.256369",
+      low: "L:235698",
+      high: "H:25.3659",
+      price1Color: "white",
+      price2Color: "green",
+    },
+    {
+      time: "15:00:00",
+      pair: "EUR/GBP",
+      change: "+30",
+      percentage: "+23.2%",
+      price1: "1478.256369",
+      price2: "1478.256369",
+      low: "L:235698",
+      high: "H:25.3659",
+      price1Color: "green",
+      price2Color: "red",
+    },
+    {
+      time: "15:00:00",
+      pair: "EUR/GBP",
+      change: "+30",
+      percentage: "+23.2%",
+      price1: "1478.256369",
+      price2: "1478.256369",
+      low: "L:235698",
+      high: "H:25.3659",
+      price1Color: "green",
+      price2Color: "red",
+    },
+    {
+      time: "15:00:00",
+      pair: "EUR/GBP",
+      change: "+30",
+      percentage: "+23.2%",
+      price1: "1478.256369",
+      price2: "1478.256369",
+      low: "L:235698",
+      high: "H:25.3659",
+      price1Color: "red",
+      price2Color: "green",
+    },
   ];
 
   const { items = defaultItems } = props;
@@ -29,14 +137,30 @@ const App = (props) => {
             <div className="w-1 h-3 bg-white/60 rounded-sm"></div>
           </div>
           {/* WiFi Icon (iPhone Style) */}
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="ml-1"
+          >
             <path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0" />
             <line x1="12" y1="20" x2="12" y2="20" />
           </svg>
           {/* Battery Icon with 80% text inside */}
           <div className="relative w-6 h-4 flex items-center justify-center">
-            <Battery size={24} strokeWidth={2} className="text-white absolute" />
-            <span className="text-[8px] font-semibold text-white z-10">80%</span>
+            <Battery
+              size={24}
+              strokeWidth={2}
+              className="text-white absolute"
+            />
+            <span className="text-[8px] font-semibold text-white z-10">
+              80%
+            </span>
           </div>
         </div>
       </div>
@@ -49,30 +173,55 @@ const App = (props) => {
 
       {/* Tabs */}
       <div className="flex gap-15 px-6 pb-4 overflow-x-auto">
-        <button className="text-gray-500 text-base whitespace-nowrap">Favourites</button>
-        <button className="text-white text-base font-semibold whitespace-nowrap border-b-2 border-white pb-1">Forex</button>
-        <button className="text-gray-500 text-base whitespace-nowrap">Crypto</button>
-        <button className="text-gray-500 text-base whitespace-nowrap">Indices</button>
-        <button className="text-gray-500 text-base whitespace-nowrap">Der...</button>
+        <button className="text-gray-500 text-base whitespace-nowrap">
+          Favourites
+        </button>
+        <button className="text-white text-base font-semibold whitespace-nowrap border-b-2 border-white pb-1">
+          Forex
+        </button>
+        <button className="text-gray-500 text-base whitespace-nowrap">
+          Crypto
+        </button>
+        <button className="text-gray-500 text-base whitespace-nowrap">
+          Indices
+        </button>
+        <button className="text-gray-500 text-base whitespace-nowrap">
+          Der...
+        </button>
       </div>
 
       {/* Forex List */}
       <div className="pb-20">
         {items.map((item, index) => (
-          <div key={index} className="flex items-center px-6 py-4 border-b border-gray-900">
+          <div
+            key={index}
+            className="flex items-center px-6 py-4 border-b border-gray-900"
+          >
             <div className="flex items-center gap-3 flex-1">
-              <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
-                <svg width="48" height="48" viewBox="0 0 48 48">
-                  <circle cx="24" cy="24" r="24" fill="#1E40AF"/>
-                  <path d="M0 24C0 10.7452 10.7452 0 24 0V48C10.7452 48 0 37.2548 0 24Z" fill="#1E3A8A"/>
-                  <path d="M48 24C48 37.2548 37.2548 48 24 48V0C37.2548 0 48 10.7452 48 24Z" fill="#FCD34D"/>
-                  <path d="M24 0C37.2548 0 48 10.7452 48 24H24V0Z" fill="#DC2626"/>
-                </svg>
+              <div className="relative w-12 h-12 flex-shrink-0">
+                {/* Back flag (USA) */}
+                <ReactCountryFlag
+                  countryCode="US"
+                  svg
+                  className="absolute w-10 h-10 rounded-full left-0 top-0 border-2 border-black"
+                />
+
+                {/* Front flag (Germany) */}
+                <ReactCountryFlag
+                  countryCode="DE"
+                  svg
+                  className="absolute w-10 h-10 rounded-full left-4 top-0 border-2 border-black"
+                />
               </div>
+
               <div className="flex flex-col">
                 <span className="text-gray-500 text-xs">{item.time}</span>
-                <span className="text-white text-base font-medium">{item.pair}</span>
-                <span className="text-green-500 text-xs font-medium">{item.change} ({item.percentage})</span>
+                <span className="text-white text-base font-medium">
+                  {item.pair}
+                </span>
+                <span className="text-green-500 text-xs font-medium">
+                  {item.change} ({item.percentage})
+                </span>
               </div>
             </div>
 
@@ -83,11 +232,11 @@ const App = (props) => {
                   {item.price1.slice(0, 3)}
                   <span
                     className={`text-lg font-semibold ${
-                      item.price1Color === 'red'
-                        ? 'text-red-500'
-                        : item.price1Color === 'green'
-                        ? 'text-green-500'
-                        : 'text-white'
+                      item.price1Color === "red"
+                        ? "text-red-500"
+                        : item.price1Color === "green"
+                        ? "text-green-500"
+                        : "text-white"
                     }`}
                   >
                     {item.price1.slice(3)}
@@ -101,11 +250,11 @@ const App = (props) => {
                   {item.price2.slice(0, 3)}
                   <span
                     className={`text-lg font-semibold ${
-                      item.price2Color === 'red'
-                        ? 'text-red-500'
-                        : item.price2Color === 'green'
-                        ? 'text-green-500'
-                        : 'text-white'
+                      item.price2Color === "red"
+                        ? "text-red-500"
+                        : item.price2Color === "green"
+                        ? "text-green-500"
+                        : "text-white"
                     }`}
                   >
                     {item.price2.slice(3)}

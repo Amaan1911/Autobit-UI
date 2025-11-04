@@ -125,7 +125,7 @@ const App = (props) => {
   const { items = defaultItems } = props;
 
   return (
-    <div className="bg-black min-h-screen text-white font-sans">
+    <div className="bg-black min-h-screen text-white font-['Google Sans'] text-base font-normal">
       {/* Status Bar */}
       <div className="flex justify-between items-center px-6 pt-2 pb-1">
         <span className="text-white text-base font-semibold">9:41</span>
@@ -198,34 +198,38 @@ const App = (props) => {
             className="flex items-center px-6 py-4 border-b border-gray-900"
           >
             <div className="flex items-center gap-3 flex-1">
-              <div className="relative w-12 h-12 flex-shrink-0">
-                {/* Back flag (USA) */}
-                <ReactCountryFlag
-                  countryCode="US"
-                  svg
-                  className="absolute w-10 h-10 rounded-full left-0 top-0 border-2 border-black"
-                />
+            <div className="relative w-12 h-12">
+  <ReactCountryFlag
+    countryCode="US"
+    svg
+    className="absolute w-9 h-9 rounded-full left-0 top-0 border-2 border-black"
+  />
 
-                {/* Front flag (Germany) */}
-                <ReactCountryFlag
-                  countryCode="DE"
-                  svg
-                  className="absolute w-10 h-10 rounded-full left-4 top-0 border-2 border-black"
-                />
-              </div>
+  <ReactCountryFlag
+    countryCode="DE"
+    svg
+    className="absolute w-15 h-15 rounded-full left-2 top-0 border-2 border-black z-10"
+  />
+</div>
+
 
               <div className="flex flex-col">
                 <span className="text-gray-500 text-xs">{item.time}</span>
                 <span className="text-white text-base font-medium">
                   {item.pair}
                 </span>
-                <span className="text-green-500 text-xs font-medium">
-                  {item.change} ({item.percentage})
+                <div className="flex gap-2">
+                  
+                <span className="text-green-600 text-xs font-medium">
+                  {item.change} 
                 </span>
+                <span className="text-gray-400 text-xs font-medium">
+                  ({item.percentage})</span>
               </div>
+                </div>
             </div>
 
-            {/* Updated Prices with Color from 4th Integer */}
+           
             <div className="flex gap-6">
               <div className="flex flex-col items-end">
                 <span className="text-base font-medium text-white">
